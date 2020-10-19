@@ -72,14 +72,13 @@ body.skills {
     z-index: 19;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
   .header__burger_logo{
     width: 150px;
-    height: 70px;
+    height: 10%;
     display: flex;
     align-items: center;
-    position: absolute;
-    z-index: 19;
   }
   
   .header .burger_menu {
@@ -91,6 +90,9 @@ body.skills {
 
   .header__contacts ul {
     display: flex;
+    width: 150px;
+    height: 10%;
+    align-self: center;
   }
   
   .header .burger_menu .burger__link {
