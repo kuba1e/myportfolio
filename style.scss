@@ -88,6 +88,10 @@ body.skills {
     cursor: pointer;
     position: relative;
   }
+
+  .header__contacts ul {
+    display: flex;
+  }
   
   .header .burger_menu .burger__link {
     width: 35px;
@@ -124,7 +128,7 @@ body.skills {
   
   @keyframes rotateF {
     from { transform: rotate(45deg);}
-    to {transform: rotate(405deg);}
+    to {transform: rotate(405deg); }
     }
   
   .burger_menu.active.hover_link::after {
@@ -256,8 +260,8 @@ body.skills {
     justify-content: center;
     -webkit-transition: all 0.5s ease-in-out 0.1s;
     transition: all 0.5s ease-in-out 0.1s;
-    .nav_link_top,.nav_link_middle,.nav_link_bottom {
-        display: block;
+    .nav_link_top,.nav_link_middle,.nav_link_bottom,.nav_link_home {
+      display: inline-block;
         font: $nav-font;
         color: $nav-color;
         overflow: hidden;
@@ -271,7 +275,7 @@ body.skills {
             width: 100%;
             height: 4px;
             border-radius: 5px;
-            background-color: #000;
+            background-color: #fff;
             transition: all 1s ease;
         }
         }
@@ -280,9 +284,19 @@ body.skills {
           left:0;
         }
       }
+      .nav_link_middle.active {
+          &::before{
+          left:0;
+        }
+      }
+      .nav_link_bottom.active {
+        &::before{
+          left:0;
+        }
+      }
         }
 
-        .nav_link_top:hover::before,.nav_link_middle:hover::before,.nav_link_bottom:hover::before {
+        .nav_link_top:hover::before,.nav_link_middle:hover::before,.nav_link_bottom:hover::before,.nav_link_home:hover::before {
         left: 0;
     }
 
@@ -426,7 +440,7 @@ body.skills {
     }
 
     //skills style//
-      main {
+      .main {
         background-color: rgb(127,191,210);
         .wrapper{
           width: 90vw;
@@ -474,6 +488,7 @@ body.skills {
               border-radius: 7px;
               background-color: #000;
               animation: scores 2s ease-in-out infinite;
+              box-sizing: content-box;
               }
             }
           }
@@ -482,15 +497,18 @@ body.skills {
 
       @keyframes scores {
         from {
-          transform: scaleX(1)
+          padding-right: 0;
         }
         
         to {
-          transform: scaleX(10)
+          padding-right: 200px;
         }
       
       }
 
+      .main.projects {
+        background-color: rgb(239,160,71);
+      }
     .parallax {
       background-image: url(/image/Depositphotos.png);
       background-attachment: fixed;
