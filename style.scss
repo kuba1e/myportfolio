@@ -81,8 +81,10 @@ body.skills {
     height: 10%;
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 18;
   }
-  
+
   .header .burger_menu {
     width: 40px;
     height: 25px;
