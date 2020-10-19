@@ -3,6 +3,7 @@ $intro-font: 200px/200px'Alfa Slab One', cursive;
 $nav-color: rgb(127,191,210);
 $basic-font-skills: 32px/37px Arial, Helvetica, sans-serif;
 $font-color-skills: #fff;
+$font-for-film-description: 60px/60px 'Alfa Slab One', cursive;
 
 body {
     cursor: none;
@@ -177,6 +178,8 @@ body.skills {
     color: rgba(255, 255, 255, 0.9);
     transition: all 0.2s ease-in-out 0.1s;
     transform: rotate(-90deg);
+    position: relative;
+    z-index: 19;
   
   }
   .header__burger_logo_title span {
@@ -352,6 +355,20 @@ body.skills {
     position: absolute;
     left: -10%;
     top: 7%;
+
+  }
+
+  .section1__text h1 {
+    position: absolute;
+    z-index: 19;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    font: $font-for-film-description;
+    color: #fff;
+
 
   }
   .section2.svg_letter {

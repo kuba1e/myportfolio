@@ -1,5 +1,5 @@
 let mouseCursor = document.querySelector(".cursor");
-let navLinks = document.querySelectorAll('.nav_links li,.header__burger_logo');
+let navLinks = document.querySelectorAll('.nav_links li,.header__burger_logo,.header__contacts');
 
 window.addEventListener('mousemove', cursor);
 
