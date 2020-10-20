@@ -1,7 +1,7 @@
 $nav-font: 48px/56px Arial, Helvetica, sans-serif;
 $intro-font: 200px/200px'Alfa Slab One', cursive;
 $nav-color: rgb(127,191,210);
-$basic-font-skills: 32px/37px Arial, Helvetica, sans-serif;
+$basic-font-skills: 32px/38px Arial, Helvetica, sans-serif;
 $font-color-skills: #fff;
 $font-for-film-title: 60px/60px 'Alfa Slab One', cursive;
 $font-for-film-description: 26px  Arial, Helvetica, sans-serif;
@@ -496,35 +496,58 @@ body.skills {
           padding:80px;
           border: 80px solid #fff;
           background-color: saddlebrown;
-          display: flex;
-          flex-direction: column;
+          color:$font-color-skills;
           h2 {
             font: 80px/94px Arial, Helvetica, sans-serif;
             font-weight: bold; 
             padding-bottom: 33px;
-            color:$font-color-skills;
           }
-          span {
-            font: 32px/64px Arial, Helvetica, sans-serif;
-            color:$font-color-skills;
-            display: block;
-            position: relative;
-            &::after {
-              content: '';
-              position: absolute;
-              left: 440px;
-              top:50%;
-              transform: translate(-50%,-50%);
-              width: 14px;
-              height: 14px;
-              border-radius: 7px;
-              background-color: #000;
-              animation: scores 2s ease-in-out infinite;
-              }
-            }
           }
         }
       }
+      .scills-scores_container {
+        display: flex;
+        justify-content: space-between;
+        .scills span {
+          font: $basic-font-skills;
+          color:inherit;
+          display: block;
+          padding-bottom: 32px;
+          
+        }
+        .scores span {
+          display: block;
+          height: 14px;
+          width: 14px;
+          background: #F92672;
+          border-radius: 7px;
+          &:nth-child(1) {
+              width: 500px;
+              margin: ;
+          }
+          &:nth-child(2) {
+            width: 500px;
+
+          }
+          &:nth-child(3){
+            width: 200px;
+          }
+          &:nth-child(4) {
+            width: 200px;
+          }
+          &:nth-child(5) {
+            width: 400px;
+          }
+          &:nth-child(6) {
+            width: 200px;
+          }
+          &:nth-child(7) {
+            width: 400px;
+          }
+        }
+      }
+
+
 
       .main.projects {
         background-color: rgb(239,160,71);

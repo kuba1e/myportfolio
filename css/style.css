@@ -628,7 +628,7 @@ svg > rect {
           transform: translate(10%, 50%);
   width: 500px;
   padding: 50px;
-  font: 32px/37px Arial, Helvetica, sans-serif;
+  font: 32px/38px Arial, Helvetica, sans-serif;
   color: #fff;
   overflow-wrap: break-word;
 }
@@ -644,42 +644,65 @@ svg > rect {
   padding: 80px;
   border: 80px solid #fff;
   background-color: saddlebrown;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  color: #fff;
 }
 
 .main .wrapper .skills-scores h2 {
   font: 80px/94px Arial, Helvetica, sans-serif;
   font-weight: bold;
   padding-bottom: 33px;
-  color: #fff;
 }
 
-.main .wrapper .skills-scores span {
-  font: 32px/64px Arial, Helvetica, sans-serif;
-  color: #fff;
+.scills-scores_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.scills-scores_container .scills span {
+  font: 32px/38px Arial, Helvetica, sans-serif;
+  color: inherit;
   display: block;
-  position: relative;
+  padding-bottom: 32px;
 }
 
-.main .wrapper .skills-scores span::after {
-  content: '';
-  position: absolute;
-  left: 440px;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 14px;
+.scills-scores_container .scores span {
+  display: block;
   height: 14px;
+  width: 14px;
+  background: #F92672;
   border-radius: 7px;
-  background-color: #000;
-  -webkit-animation: scores 2s ease-in-out infinite;
-          animation: scores 2s ease-in-out infinite;
+}
+
+.scills-scores_container .scores span:nth-child(1) {
+  width: 500px;
+}
+
+.scills-scores_container .scores span:nth-child(2) {
+  width: 500px;
+}
+
+.scills-scores_container .scores span:nth-child(3) {
+  width: 200px;
+}
+
+.scills-scores_container .scores span:nth-child(4) {
+  width: 200px;
+}
+
+.scills-scores_container .scores span:nth-child(5) {
+  width: 400px;
+}
+
+.scills-scores_container .scores span:nth-child(6) {
+  width: 200px;
+}
+
+.scills-scores_container .scores span:nth-child(7) {
+  width: 400px;
 }
 
 .main.projects {

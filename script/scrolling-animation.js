@@ -1,7 +1,11 @@
-let tl = gsap.timeline({
+gsap.from(".scores", {
     scrollTrigger: {
-        trigger: ".parallax",
-        start: "center bottom"
-    }
+        trigger: ".scores",
+        toggleActions: "restart pause resume pause"
+    },
+    scaleX: 0.1,
+    duration: 2,
+    transformOrigin: "left center",
+    ease: "none"
 });
-tl.from(".skills-scores", { x: "500", duration: 1 });
+
