@@ -5,7 +5,8 @@ body {
 }
 
 body.skills {
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .intro {
@@ -624,6 +625,8 @@ svg > rect {
 
 .main .wrapper .introduction {
   display: inline-block;
+  position: relative;
+  left: -1000px;
   -webkit-transform: translate(10%, 50%);
           transform: translate(10%, 50%);
   width: 500px;
@@ -669,44 +672,41 @@ svg > rect {
   padding-bottom: 32px;
 }
 
-.scills-scores_container .scores span {
+.scores span {
   display: block;
   height: 14px;
   width: 14px;
   background: #F92672;
   border-radius: 7px;
+  margin: 12px 0 12px;
 }
 
-.scills-scores_container .scores span:nth-child(1) {
+.scores span:nth-child(1) {
   width: 500px;
 }
 
-.scills-scores_container .scores span:nth-child(2) {
+.scores span:nth-child(2) {
   width: 500px;
 }
 
-.scills-scores_container .scores span:nth-child(3) {
+.scores span:nth-child(3) {
   width: 200px;
 }
 
-.scills-scores_container .scores span:nth-child(4) {
+.scores span:nth-child(4) {
   width: 200px;
 }
 
-.scills-scores_container .scores span:nth-child(5) {
+.scores span:nth-child(5) {
   width: 400px;
 }
 
-.scills-scores_container .scores span:nth-child(6) {
+.scores span:nth-child(6) {
   width: 200px;
 }
 
-.scills-scores_container .scores span:nth-child(7) {
+.scores span:nth-child(7) {
   width: 400px;
-}
-
-.main.projects {
-  background-color: #efa047;
 }
 
 .parallax {
@@ -726,4 +726,10 @@ svg > rect {
 
 .main.projects {
   height: 100vh;
+  background-color: #efa047;
+}
+
+.main.experience {
+  height: 100vh;
+  background-color: #6dcc7a;
 }

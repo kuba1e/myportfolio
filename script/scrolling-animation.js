@@ -9,3 +9,15 @@ gsap.from(".scores", {
     ease: "none"
 });
 
+
+gsap.to(".introduction", {
+    scrollTrigger: {
+        trigger: ".box",
+        toggleActions: "play pause resume reverse"
+    },
+    // start the animation when ".box" enters the viewport (once)
+    x: 1000,
+    duration: 1
+});
+
+
