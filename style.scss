@@ -491,8 +491,7 @@ body.projects {
     // style
       .main {
         .wrapper{
-          width: 90vw;
-          height: auto;
+          width: 90%;
           margin: 0 auto;
         .introduction,.introduction_projects,.introduction_experience {
           display: inline-block;
@@ -542,9 +541,9 @@ body.projects {
               img {
                 display: block;
                 position: relative;
-                width: 500px;
+                width: 100%;
                 height: auto;
-                right: -1000px;
+                right: -10000px;
                 top: 0;
               }
             }
@@ -559,6 +558,9 @@ body.projects {
           }
         }
 
+        .main.projects_style {
+          margin-bottom: 20%;
+        }
 
       .scills-scores_container {
         display: flex;

@@ -48,7 +48,7 @@ gsap.to(".projects_mylib", {
         toggleActions: "play play play reverse"
     },
     // start the animation when ".box" enters the viewport (once)
-    x: -1000,
+    x: -10000,
     duration: 1,
 });
 
@@ -59,7 +59,7 @@ gsap.to(".project_responsive", {
         toggleActions: "play play play reverse"
     },
     // start the animation when ".box" enters the viewport (once)
-    x: -1000,
+    x: -10000,
     duration: 1,
     delay: 1,
     ease: "none"
@@ -69,13 +69,13 @@ gsap.to(".project_responsive", {
 
 
 ScrollTrigger.create({
-    trigger: ".parallax",
+    trigger: "",
     start: "top center",
     toggleClass: { targets: ".main", className: "active" }
 });
 
 ScrollTrigger.create({
-    trigger: ".parallax",
+    trigger: "",
     start: "top center",
     toggleClass: { targets: ".main", className: "active" }
 });
