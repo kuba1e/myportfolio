@@ -579,9 +579,10 @@ body.projects {
           width: 14px;
           background: #F92672;
           border-radius: 7px;
-          margin: 12px 0 12px;
+          margin-bottom: 56px;
           &:nth-child(1) {
             width: 500px;
+            margin-top:12px;
           }
           &:nth-child(2) {
             width: 500px;
