@@ -1,12 +1,32 @@
+.main .wrapper .skills-scores h2, .main .wrapper .introduction_projects h2, .main .wrapper .introduction_experience h1 {
+  font: 80px/94px Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding-bottom: 33px;
+}
+
+.main .wrapper .introduction h2, .main .wrapper .introduction_projects h2, .main .wrapper .introduction_experience h2, .main .wrapper .introduction_projects h3 {
+  font-weight: bold;
+  display: block;
+  padding-bottom: 30px;
+}
+
 body {
   cursor: none;
   width: 100vw;
   height: 100vh;
 }
 
-body.skills {
+body.skills, body.projects {
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+body.skills {
+  background-color: #7fbfd2;
+}
+
+body.projects {
+  background-color: #efa047;
 }
 
 .intro {
@@ -614,19 +634,17 @@ svg > rect {
           align-items: center;
 }
 
-.main {
-  background-color: #7fbfd2;
-}
-
 .main .wrapper {
   width: 90vw;
+  height: auto;
   margin: 0 auto;
 }
 
-.main .wrapper .introduction {
+.main .wrapper .introduction, .main .wrapper .introduction_projects, .main .wrapper .introduction_experience {
   display: inline-block;
   position: relative;
-  left: -1000px;
+  left: 0;
+  top: 0;
   -webkit-transform: translate(10%, 50%);
           transform: translate(10%, 50%);
   width: 500px;
@@ -636,24 +654,52 @@ svg > rect {
   overflow-wrap: break-word;
 }
 
-.main .wrapper .introduction h2 {
-  font-weight: bold;
-  display: block;
-  padding-bottom: 30px;
-}
-
 .main .wrapper .skills-scores {
   width: 100%;
   padding: 80px;
-  border: 80px solid #fff;
+  border: 80px solid #7fbfd2;
   background-color: saddlebrown;
   color: #fff;
 }
 
-.main .wrapper .skills-scores h2 {
-  font: 80px/94px Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  padding-bottom: 33px;
+.main .wrapper .introduction_projects {
+  width: auto;
+  left: 0;
+  -webkit-transform: translateY(20%);
+          transform: translateY(20%);
+}
+
+.main .wrapper .introduction_projects h3 {
+  font: 32px/38px Arial, Helvetica, sans-serif;
+}
+
+.main .wrapper .introduction_projects .grid_container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
+}
+
+.main .wrapper .introduction_projects .grid_container .description_top, .main .wrapper .introduction_projects .grid_container .description_bottom {
+  position: relative;
+  left: -1000px;
+  top: 0;
+}
+
+.main .wrapper .introduction_projects .grid_container img {
+  display: block;
+  position: relative;
+  width: 500px;
+  height: auto;
+  right: -1000px;
+  top: 0;
+}
+
+.main .wrapper .introduction_experience {
+  left: 0;
+  width: auto;
 }
 
 .scills-scores_container {
@@ -724,9 +770,9 @@ svg > rect {
   opacity: 0;
 }
 
-.main.projects {
-  height: 100vh;
-  background-color: #efa047;
+.projects_mylib, .project_responsive {
+  width: 400px;
+  height: auto;
 }
 
 .main.experience {

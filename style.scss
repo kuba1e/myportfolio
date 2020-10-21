@@ -5,6 +5,16 @@ $basic-font-skills: 32px/38px Arial, Helvetica, sans-serif;
 $font-color-skills: #fff;
 $font-for-film-title: 60px/60px 'Alfa Slab One', cursive;
 $font-for-film-description: 26px  Arial, Helvetica, sans-serif;
+%title-for-scores-projects {
+  font: 80px/94px Arial, Helvetica, sans-serif;
+  font-weight: bold; 
+  padding-bottom: 33px;
+}
+%sub-title {
+  font-weight: bold;
+  display: block;
+  padding-bottom: 30px;
+}
 
 body {
     cursor: none;
@@ -12,10 +22,19 @@ body {
     height: 100vh;
 }
 
-body.skills {
+body.skills,body.projects {
   overflow-y:auto;
   overflow-x: hidden;
 }
+body.skills {
+background-color: rgb(127,191,210);
+}
+
+body.projects {
+  background-color: rgb(239,160,71);
+}
+
+
   .intro{
       width: 100vw;
       height: 100vh;
@@ -145,8 +164,6 @@ body.skills {
     from { transform: rotate(-45deg);}
     to {transform: rotate(-405deg);}
     }
-  
-  
   .header .burger_menu::after {
     content: "";
     width: 30px;
@@ -160,7 +177,6 @@ body.skills {
     -webkit-transition: all 0.2s ease-in-out 0.1s;
     transition: all 0.2s ease-in-out 0.1s;
   }
-  
   
   .header__mail_logo.hover_link #rocket_comp {
     animation: rocket 3s linear infinite;
@@ -472,16 +488,17 @@ body.skills {
       align-items: center;
     }
 
-    //Skills style
+    // style
       .main {
-        background-color: rgb(127,191,210);
         .wrapper{
           width: 90vw;
+          height: auto;
           margin: 0 auto;
-        .introduction {
+        .introduction,.introduction_projects,.introduction_experience {
           display: inline-block;
           position: relative;
-          left: -1000px;
+          left: 0;
+          top:0;
           transform: translate(10%,50%);
           width: 500px;
           padding: 50px;
@@ -489,25 +506,58 @@ body.skills {
           color: $font-color-skills;
           overflow-wrap: break-word;
           h2 {
-            font-weight: bold;
-            display: block;
-            padding-bottom: 30px;
+            @extend %sub-title;
           }
         }
         .skills-scores {
           width: 100%;
           padding:80px;
-          border: 80px solid #fff;
+          border: 80px solid rgb(127,191,210);
           background-color: saddlebrown;
           color:$font-color-skills;
           h2 {
-            font: 80px/94px Arial, Helvetica, sans-serif;
-            font-weight: bold; 
-            padding-bottom: 33px;
+              @extend %title-for-scores-projects;
+          }
+          }
+          .introduction_projects {
+            width: auto;
+            left:0;
+            transform: translateY(20%);
+            h2 {
+              @extend %title-for-scores-projects;
+            }
+            h3 {
+              font: $basic-font-skills;
+              @extend  %sub-title;
+            }
+            .grid_container {
+              display: grid;
+              grid-template-columns: 50% 50%;
+              grid-template-rows: 50% 50%;
+              .description_top,.description_bottom {
+                position: relative;
+                left: -1000px;
+                top: 0;
+              }
+              img {
+                display: block;
+                position: relative;
+                width: 500px;
+                height: auto;
+                right: -1000px;
+                top: 0;
+              }
+            }
+          }
+          .introduction_experience {
+            left: 0;
+            width: auto;
+            h1 {
+              @extend %title-for-scores-projects;
+            }
           }
           }
         }
-      }
 
 
       .scills-scores_container {
@@ -568,11 +618,10 @@ body.skills {
     }
 
     //Projects style.
-    .main.projects {
-      height: 100vh;
-        background-color: rgb(239,160,71);
+      .projects_mylib,.project_responsive {
+        width: 400px;
+        height: auto;
       }
-
     //Experience style.
 
       .main.experience {
