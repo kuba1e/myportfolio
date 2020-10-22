@@ -692,17 +692,13 @@ svg > rect {
   position: relative;
   width: 100%;
   height: auto;
-  right: -10000px;
+  right: -4000px;
   top: 0;
 }
 
 .main .wrapper .introduction_experience {
   left: 0;
   width: auto;
-}
-
-.main.projects_style {
-  margin-bottom: 20%;
 }
 
 .scills-scores_container {
@@ -777,9 +773,4 @@ svg > rect {
 .projects_mylib, .project_responsive {
   width: 400px;
   height: auto;
-}
-
-.main.experience {
-  height: 100vh;
-  background-color: #6dcc7a;
 }

@@ -13,6 +13,7 @@ gsap.from(".scores", {
 gsap.to(".introduction.skills", {
     scrollTrigger: {
         trigger: ".box",
+        start: "end top",
         toggleActions: "play pause resume reverse"
     },
     // start the animation when ".box" enters the viewport (once)
@@ -21,7 +22,8 @@ gsap.to(".introduction.skills", {
 
 gsap.to(".description_top", {
     scrollTrigger: {
-        trigger: "",
+        trigger: ".scills-scores_container",
+        start: "bottom top",
         toggleActions: "play play play reverse"
     },
     // start the animation when ".box" enters the viewport (once)
@@ -31,7 +33,8 @@ gsap.to(".description_top", {
 
 gsap.to(".description_bottom", {
     scrollTrigger: {
-        trigger: "",
+        trigger: ".grid_container",
+        start: "top center",
         toggleActions: "play play play reverse"
     },
     // start the animation when ".box" enters the viewport (once)
@@ -44,22 +47,24 @@ gsap.to(".description_bottom", {
 
 gsap.to(".projects_mylib", {
     scrollTrigger: {
-        trigger: "",
+        trigger: ".scills-scores_container",
+        start: "bottom top",
         toggleActions: "play play play reverse"
     },
     // start the animation when ".box" enters the viewport (once)
-    x: -10000,
+    x: -4000,
     duration: 1,
 });
 
 
 gsap.to(".project_responsive", {
     scrollTrigger: {
-        trigger: "",
+        trigger: ".grid_container",
+        start: "top center",
         toggleActions: "play play play reverse"
     },
     // start the animation when ".box" enters the viewport (once)
-    x: -10000,
+    x: -4000,
     duration: 1,
     delay: 1,
     ease: "none"
@@ -69,13 +74,8 @@ gsap.to(".project_responsive", {
 
 
 ScrollTrigger.create({
-    trigger: "",
-    start: "top center",
-    toggleClass: { targets: ".main", className: "active" }
-});
-
-ScrollTrigger.create({
-    trigger: "",
-    start: "top center",
+    trigger: ".introduction.skills",
+    start: "top top",
+    marker: true,
     toggleClass: { targets: ".main", className: "active" }
 });

@@ -543,7 +543,7 @@ body.projects {
                 position: relative;
                 width: 100%;
                 height: auto;
-                right: -10000px;
+                right: -4000px;
                 top: 0;
               }
             }
@@ -556,10 +556,6 @@ body.projects {
             }
           }
           }
-        }
-
-        .main.projects_style {
-          margin-bottom: 20%;
         }
 
       .scills-scores_container {
@@ -625,10 +621,3 @@ body.projects {
         width: 400px;
         height: auto;
       }
-    //Experience style.
-
-      .main.experience {
-        height: 100vh;
-        background-color: rgb(109,204,122);
-      }
-
