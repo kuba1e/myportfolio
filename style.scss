@@ -22,18 +22,9 @@ body {
     height: 100vh;
 }
 
-body.skills,body.projects {
-  overflow-y:auto;
-  overflow-x: hidden;
-}
 body.skills {
 background-color: rgb(127,191,210);
 }
-
-body.projects {
-  background-color: rgb(239,160,71);
-}
-
 
   .intro{
       width: 100vw;
@@ -476,7 +467,6 @@ body.projects {
 
 
     .scroll {
-      overflow: hidden;
       position: fixed;
       z-index: 18;
       right: 3%;
@@ -486,6 +476,22 @@ body.projects {
       display: flex;
       flex-direction: column;
       align-items: center;
+      .arrow {
+        animation: arrow 1s linear infinite;
+
+      }
+    }
+
+    @keyframes arrow {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(2px);
+      }
+      100% {
+        transform: translateY(5px);
+      }
     }
 
     // style

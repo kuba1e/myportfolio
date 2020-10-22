@@ -16,17 +16,8 @@ body {
   height: 100vh;
 }
 
-body.skills, body.projects {
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
 body.skills {
   background-color: #7fbfd2;
-}
-
-body.projects {
-  background-color: #efa047;
 }
 
 .intro {
@@ -615,7 +606,6 @@ svg > rect {
 }
 
 .scroll {
-  overflow: hidden;
   position: fixed;
   z-index: 18;
   right: 3%;
@@ -632,6 +622,41 @@ svg > rect {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.scroll .arrow {
+  -webkit-animation: arrow 1s linear infinite;
+          animation: arrow 1s linear infinite;
+}
+
+@-webkit-keyframes arrow {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+  }
+  100% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+}
+
+@keyframes arrow {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+  }
+  100% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
 }
 
 .main .wrapper {
