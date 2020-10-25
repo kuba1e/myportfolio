@@ -345,6 +345,7 @@ body {
 
   .section1 {
     overflow: hidden;
+    //transition: all 1s ease 0.5s;
     .background_mask {
     background-image: url(/image/section1.svg);
       @extend %background-style;
@@ -352,6 +353,9 @@ body {
   }
   .background_mask.active,.section__text.active {
     opacity: 0;
+  }
+  .background_mask.opacity {
+    opacity: 0.5;
   }
   .section__video {
     height: 100%;
@@ -364,6 +368,7 @@ body {
 
   .section2 {
     overflow: hidden;
+   // transition: all 1s ease 1.5s;
     .background_mask {
     background-image: url(/image/section2.svg);
     @extend %background-style;
@@ -415,7 +420,7 @@ body {
         border: 1px solid inherit;
         border-radius: 10px;
         background: rgb(255,255,255);
-        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(36,103,210,1) 25%, rgba(36,103,210,1) 75%, rgba(255,255,255,1) 100%);            
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(238,208,146,1) 33%, rgba(238,208,146,1) 66%, rgba(255,255,255,1) 100%);            
       }
 
     .section__text blockquote {
@@ -433,6 +438,7 @@ body {
 
   .section3 {
     overflow: hidden;
+    //transition: all 1s ease 2.5s;
     .background_mask {
     background-image: url(/image/section3.svg);
     @extend %background-style;
@@ -447,8 +453,8 @@ body {
     }
   }
 
-  .section4.front {
-    transform: translate3d(0, 0px, 100%);
+  .section3.front,.section2.front,.section1.front {
+    transform: translate3d(-100%, 0px, 0px);
   }
 
     .scroll {
@@ -479,20 +485,92 @@ body {
         transform: translateY(5px);
       }
     }
+    .container_click.active {
+      visibility: hidden;
+      pointer-events: none;
+      opacity: 0;
 
-
-    .container_click {
-      position: absolute;
-      left: 23%;
-      bottom: 5%;
-      z-index: 18;
-      font: 22px Arial, cursive;
-      color: #fff;
-  transition: all 1s ease 0.5s;
     }
 
-    .container_click.active {
-      opacity: 0;
+    .container_click {
+      width: 150px;
+      height: 50px;
+      position: absolute;
+      left: 25%;
+      bottom: 0;
+      transform: translate(-50%,-50%);
+      z-index: 18;
+      text-align: center;
+      font: 22px/50px Arial, cursive;
+      color: #fff;
+      transition: all 1s ease 0.5s;
+      .click span,.it span {
+        display: inline-block;
+      }
+      .click {
+        :nth-child(1) {
+          animation: letter1 1s ease 0.5s infinite;
+          animation-direction: alternate;
+
+        }
+        :nth-child(2){
+          animation: letter2 1s ease 1s infinite;
+          animation-direction: alternate;
+
+        }
+      :nth-child(3){
+        animation: letter3 1s ease 2s infinite;
+        animation-direction: alternate;
+
+      }
+      :nth-child(4) {
+        animation: letter1 1s ease 0.5s infinite;
+        animation-direction: alternate;
+
+      }
+      :nth-child(5){
+        animation: letter2 1s ease 1s infinite;
+        animation-direction: alternate;
+
+      }
+      }
+      .it {
+        :nth-child(1) {
+          animation: letter1 1s ease 0.5s infinite;
+          animation-direction: alternate;
+
+        }
+        :nth-child(2){
+          animation: letter2 1s ease 1s infinite;
+          animation-direction: alternate;
+
+        }
+      }
+    }
+
+    @keyframes letter1 {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-10px);
+      }
+    }
+    @keyframes letter2 {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-10px);
+      }
+    }
+    @keyframes letter3 {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-10px);
+      }
     }
     // style
         .skills-scores {

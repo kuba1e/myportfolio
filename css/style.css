@@ -479,6 +479,10 @@ body {
   opacity: 0;
 }
 
+.background_mask.opacity {
+  opacity: 0.5;
+}
+
 .section__video {
   height: 100%;
   position: absolute;
@@ -554,8 +558,8 @@ body {
   border: 1px solid inherit;
   border-radius: 10px;
   background: white;
-  background: -webkit-gradient(linear, left top, right top, from(white), color-stop(25%, #2467d2), color-stop(75%, #2467d2), to(white));
-  background: linear-gradient(90deg, white 0%, #2467d2 25%, #2467d2 75%, white 100%);
+  background: -webkit-gradient(linear, left top, right top, from(white), color-stop(33%, #eed092), color-stop(66%, #eed092), to(white));
+  background: linear-gradient(90deg, white 0%, #eed092 33%, #eed092 66%, white 100%);
 }
 
 .section__text blockquote {
@@ -587,9 +591,9 @@ body {
   background-image: url(/image/section4.svg);
 }
 
-.section4.front {
-  -webkit-transform: translate3d(0, 0px, 100%);
-          transform: translate3d(0, 0px, 100%);
+.section3.front, .section2.front, .section1.front {
+  -webkit-transform: translate3d(-100%, 0px, 0px);
+          transform: translate3d(-100%, 0px, 0px);
 }
 
 .scroll {
@@ -648,19 +652,145 @@ body {
   }
 }
 
+.container_click.active {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+
 .container_click {
+  width: 150px;
+  height: 50px;
   position: absolute;
-  left: 23%;
-  bottom: 5%;
+  left: 25%;
+  bottom: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   z-index: 18;
-  font: 22px Arial, cursive;
+  text-align: center;
+  font: 22px/50px Arial, cursive;
   color: #fff;
   -webkit-transition: all 1s ease 0.5s;
   transition: all 1s ease 0.5s;
 }
 
-.container_click.active {
-  opacity: 0;
+.container_click .click span, .container_click .it span {
+  display: inline-block;
+}
+
+.container_click .click :nth-child(1) {
+  -webkit-animation: letter1 1s ease 0.5s infinite;
+          animation: letter1 1s ease 0.5s infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.container_click .click :nth-child(2) {
+  -webkit-animation: letter2 1s ease 1s infinite;
+          animation: letter2 1s ease 1s infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.container_click .click :nth-child(3) {
+  -webkit-animation: letter3 1s ease 2s infinite;
+          animation: letter3 1s ease 2s infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.container_click .click :nth-child(4) {
+  -webkit-animation: letter1 1s ease 0.5s infinite;
+          animation: letter1 1s ease 0.5s infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.container_click .click :nth-child(5) {
+  -webkit-animation: letter2 1s ease 1s infinite;
+          animation: letter2 1s ease 1s infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.container_click .it :nth-child(1) {
+  -webkit-animation: letter1 1s ease 0.5s infinite;
+          animation: letter1 1s ease 0.5s infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.container_click .it :nth-child(2) {
+  -webkit-animation: letter2 1s ease 1s infinite;
+          animation: letter2 1s ease 1s infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@-webkit-keyframes letter1 {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+
+@keyframes letter1 {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+
+@-webkit-keyframes letter2 {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+
+@keyframes letter2 {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+
+@-webkit-keyframes letter3 {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+
+@keyframes letter3 {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
 }
 
 .skills-scores {

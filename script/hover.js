@@ -13,3 +13,12 @@ $(".description_top").hover(
     }
 );
 
+$(".container_click").hover(
+    function () {
+        $('.background_mask').addClass("opacity");
+    }, function () {
+        $('.background_mask').removeClass("opacity");
+    }
+);
+
+
