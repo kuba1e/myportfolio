@@ -1,0 +1,26 @@
+$(document).ready(function () {
+    $('.background_mask').click(function (event) {
+        $('.background_mask,.section__text,.container_click').toggleClass('active');
+    });
+    $('.show_skills-scores').click(function (event) {
+        $('.skills-scores').toggleClass('active');
+    });
+    $('.hide_skills_scores').click(function (event) {
+        $('.skills-scores').removeClass('active');
+    });
+    $('.show_projects').click(function (event) {
+        $('.introduction_projects').toggleClass('active');
+    });
+    $('.hide_projects').click(function (event) {
+        $('.introduction_projects').removeClass('active');
+    });
+    $('.show_experience').click(function (event) {
+        $('.introduction_experience').toggleClass('active');
+    });
+    $('.hide_experience').click(function (event) {
+        $('.introduction_experience').removeClass('active');
+    });
+    $('.hide_experience').click(function (event) {
+        $('.introduction_experience').removeClass('active');
+    });
+});

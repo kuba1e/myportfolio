@@ -5,6 +5,7 @@ $basic-font-skills: 32px/38px Arial, Helvetica, sans-serif;
 $font-color-skills: #fff;
 $font-for-film-title: 60px/60px 'Alfa Slab One', cursive;
 $font-for-film-description: 26px  Arial, Helvetica, sans-serif;
+$button-fonts: 22px Arial, Helvetica, sans-serif;
 %title-for-scores-projects {
   font: 80px/94px Arial, Helvetica, sans-serif;
   font-weight: bold; 
@@ -15,16 +16,24 @@ $font-for-film-description: 26px  Arial, Helvetica, sans-serif;
   display: block;
   padding-bottom: 30px;
 }
+%background-style {
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 18;
+  left: 0;
+  top: 0;
+  transition: all 1s ease 0.5s;
+}
 
 body {
     cursor: none;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 }
 
-body.skills {
-background-color: rgb(127,191,210);
-}
 
   .intro{
       width: 100vw;
@@ -141,6 +150,8 @@ background-color: rgb(127,191,210);
   
   .burger_menu.active.hover_link::before {
     animation: rotateF 1s linear;
+    animation-direction: alternate;
+
   }
   
   @keyframes rotateF {
@@ -150,6 +161,8 @@ background-color: rgb(127,191,210);
   
   .burger_menu.active.hover_link::after {
     animation: rotateB 1s linear;
+    animation-direction: alternate;
+
   }
   @keyframes rotateB {
     from { transform: rotate(-45deg);}
@@ -171,7 +184,7 @@ background-color: rgb(127,191,210);
   
   .header__mail_logo.hover_link #rocket_comp {
     animation: rocket 3s linear infinite;
-    animation-fill-mode: backwards;
+    animation-direction: alternate;
   }
   
   @keyframes rocket {
@@ -212,6 +225,8 @@ background-color: rgb(127,191,210);
   
   .header__mail_logo.hover_link #cloud_comp {
     animation: cloud 3s linear infinite;
+    animation-direction: alternate;
+
   }
   
   @keyframes cloud {
@@ -224,6 +239,8 @@ background-color: rgb(127,191,210);
   }
   .header__mail_logo.hover_link #moon {
     animation: moon 3s linear infinite;
+    animation-direction: alternate;
+
   }
   
   @keyframes moon {
@@ -316,7 +333,7 @@ background-color: rgb(127,191,210);
         left: 0;
     }
 
- .header__slidebar_menu.active {
+  .header__slidebar_menu.active {
     left: 0;
     z-index: 17;
   }
@@ -328,58 +345,80 @@ background-color: rgb(127,191,210);
 
   .section1 {
     overflow: hidden;
-    background-color: rgb(127,191,210);
+    .background_mask {
+    background-image: url(/image/section1.svg);
+      @extend %background-style;
+  }
+  }
+  .background_mask.active,.section__text.active {
+    opacity: 0;
   }
   .section__video {
-    width: 74%;
+    height: 100%;
     position: absolute;
-    left: -10%;
-    top: 7%;
-
-  }
-  .svg_letter {
-    position: fixed;
-    z-index: 18;
-    left: 0;
-    top: 0;
-    font-family: 'Alfa Slab One', cursive;
-    font-size: calc(100vw/2.688);
-    font-weight: bold;
-  }
-
-  svg rect {
-    fill: #fff;
-    mask: url(#mask1);
-  }
-
-  svg > rect {
-    fill: rgb(127,191,210);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
   }
 
 
   .section2 {
-    background-color: rgb(241,208,27);
+    overflow: hidden;
+    .background_mask {
+    background-image: url(/image/section2.svg);
+    @extend %background-style;
+    }
   }
   
-  .section2.section__video {
-    width: 70%;
-    position: absolute;
-    left: -10%;
-    top: 7%;
-
-  }
   .section__text {
     position: absolute;
+    right: 10%;
+    top: 50%;
+    width: 40%;
+    transform: translate(0,-50%);
     z-index: 19;
     display: flex;
     flex-direction: column;
-    flex-direction: flex-end ;
-    left: 70%;
-    top: 50%;
-    transform: translate(-50%,-50%);
+    justify-content: flex-end ;
     text-align: right;
-  }
-  .section__text h1 {
+    transition: all 1s ease 0.5s;
+
+    .show_skills-scores {
+      display: block;
+      width: 100%;
+      text-align: center;
+      font: $button-fonts;
+      padding: 20px 40px;
+      border: 1px solid inherit;
+      border-radius: 10px;
+      background: rgb(255,255,255);
+      background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(161,212,97,1) 33%, rgba(161,212,97,1) 66%, rgba(255,255,255,1) 100%);
+        }
+        .show_projects {
+          display: block;
+          width: 100%;
+          text-align: center;
+          font: $button-fonts;
+          padding: 20px 40px;
+          border: 1px solid inherit;
+          border-radius: 10px;
+          background: rgb(255,255,255);
+          background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,178,68,1) 33%, rgba(255,178,68,1) 66%, rgba(255,255,255,1) 100%);
+        }
+      }
+      .show_experience {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font: $button-fonts;
+        padding: 20px 40px;
+        border: 1px solid inherit;
+        border-radius: 10px;
+        background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(36,103,210,1) 25%, rgba(36,103,210,1) 75%, rgba(255,255,255,1) 100%);            
+      }
+
+    .section__text blockquote {
     font: $font-for-film-title;
     color: #fff;
     display: block;
@@ -389,82 +428,28 @@ background-color: rgb(127,191,210);
   .section__text p {
     font: $font-for-film-description;
     color: #fff;
+    margin-bottom: 30px;
   }
 
-  .section2.svg_letter {
-    position: fixed;
-    z-index: 18;
-    left: 0;
-    top: 0;
-    font-family: 'Alfa Slab One', cursive;
-    font-size: calc(100vw/2.688);
-    font-weight: bold;
-  }
-
-  .section2 svg rect {
-    fill: #fff;
-    mask: url(#mask2);
-  }
-  .section2 svg > rect {
-    fill: rgb(241,208,27);
-  }
   .section3 {
-  background-color: rgb(241,208,27);
-  }
-  .section3 .section__video {
-    width: 70%;
-    position: absolute;
-    left: -10%;
-    top: 7%;
-
-  }
-  .section3 .svg_letter {
-    position: fixed;
-    z-index: 18;
-    left: 0;
-    top: 0;
-    font-family: 'Alfa Slab One', cursive;
-    font-size: calc(100vw/2.688);
-    font-weight: bold;
+    overflow: hidden;
+    .background_mask {
+    background-image: url(/image/section3.svg);
+    @extend %background-style;
+    }
   }
 
-  .section3 svg rect {
-    fill: #fff;
-    mask: url(#mask3);
-  }
-  .section3 svg > rect {
-    fill: rgb(239,160,71);
-  }
-  
-  
   .section4 {
-    background-color: rgb(109,204,122);
+    overflow: hidden;
+    .background_mask {
+    background-image: url(/image/section4.svg);
+    @extend %background-style;
     }
-    .section4.section__video {
-      width: 70%;
-      position: absolute;
-      left: -10%;
-      top: 7%;
-  
-    }
-    .section4.svg_letter {
-      position: fixed;
-      z-index: 18;
-      left: 0;
-      top: 0;
-      font-family: 'Alfa Slab One', cursive;
-      font-size: calc(100vw/2.688);
-      font-weight: bold;
-    }
-  
-    .section4 svg rect {
-      fill: #fff;
-      mask: url(#mask4);
-    }
-    .section4 svg > rect {
-      fill:rgb(109,204,122);
-    }
+  }
 
+  .section4.front {
+    transform: translate3d(0, 0px, 100%);
+  }
 
     .scroll {
       position: fixed;
@@ -478,6 +463,7 @@ background-color: rgb(127,191,210);
       align-items: center;
       .arrow {
         animation: arrow 1s linear infinite;
+        animation-direction: alternate;
 
       }
     }
@@ -494,94 +480,199 @@ background-color: rgb(127,191,210);
       }
     }
 
+
+    .container_click {
+      position: absolute;
+      left: 23%;
+      bottom: 5%;
+      z-index: 18;
+      font: 22px Arial, cursive;
+      color: #fff;
+  transition: all 1s ease 0.5s;
+    }
+
+    .container_click.active {
+      opacity: 0;
+    }
     // style
-      .main {
-        .wrapper{
-          width: 90%;
-          margin: 0 auto;
-        .introduction,.introduction_projects,.introduction_experience {
-          display: inline-block;
-          position: relative;
-          left: 0;
-          top:0;
-          transform: translate(10%,50%);
-          width: 500px;
-          padding: 50px;
-          font: $basic-font-skills;
-          color: $font-color-skills;
-          overflow-wrap: break-word;
-          h2 {
-            @extend %sub-title;
-          }
-        }
         .skills-scores {
+          position: absolute;
+          z-index: 19;
+          left: 100%;
+          bottom:0;
           width: 100%;
+          height: 100%;
           padding:80px;
-          border: 80px solid rgb(127,191,210);
           background-color: saddlebrown;
           color:$font-color-skills;
+          transition: all 2s ease;
+          
           h2 {
               @extend %title-for-scores-projects;
           }
-          }
+        }
+          
           .introduction_projects {
-            width: auto;
-            left:0;
-            transform: translateY(20%);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 100%;
+            top:0;
+            z-index: 20;
+            padding:80px;  
+            background-color: saddlebrown;
+            color:$font-color-skills;
+            transition: all 2s ease;       
             h2 {
               @extend %title-for-scores-projects;
             }
+            .grid_container {
+              width: 100%;
+              height: 80;
+              display: grid;
+              justify-content:center ;
+              grid-template-columns: 50% 50%;
+              grid-template-rows: 1fr 1fr;
+              grid-template-areas: 
+              "top responsive"
+              "bottom responsive"
+              ;
+              overflow: hidden;
+
+            }
+            p {
+              font: $basic-font-skills;
+              margin-bottom: 16px;
+            }
+
             h3 {
               font: $basic-font-skills;
               @extend  %sub-title;
-            }
-            .grid_container {
-              display: grid;
-              grid-template-columns: 50% 50%;
-              grid-template-rows: 50% 50%;
+              font-weight: bold;
+              }
               .description_top,.description_bottom {
                 position: relative;
-                left: -1000px;
+                left: 0;
                 top: 0;
               }
+              .description_bottom {
+                grid-area: bottom;
+              }
+              .description_top {
+                grid-area: top;
+              }
+              .project_responsive {
+                grid-area: responsive;
+              }
+              .projects_mylib {
+                grid-area: responsive;
+              }
+
               img {
                 display: block;
                 position: relative;
                 width: 100%;
-                height: auto;
-                right: -4000px;
+                right: -100%;
                 top: 0;
+                transition: all 2s ease;
               }
-            }
+              }
+
+              .project_responsive.hover {
+                transform: translateX(-100%);
+              }
+              
+              .projects_mylib.hover {
+                transform: translateX(-100%);
+              }
+
+          .introduction_projects.active {
+            transform: translateX(-100%);
+            transition: all 2s ease ;
           }
+        
+
           .introduction_experience {
-            left: 0;
-            width: auto;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 100%;
+            bottom:0;
+            padding:80px;  
+            z-index: 100;
+            background-color: saddlebrown;
+            color:$font-color-skills;
+            transition: all 2s ease;       
             h1 {
               @extend %title-for-scores-projects;
             }
           }
+          
+          .hide_experience {
+            display: block;
+            width: 20%;
+            text-align: center;
+            font: $button-fonts;
+            padding: 20px 40px;
+            border: 1px solid inherit;
+            border-radius: 10px;
+            background: rgb(255,255,255);
+            background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(36,103,210,1) 25%, rgba(36,103,210,1) 75%, rgba(255,255,255,1) 100%); 
           }
-        }
+          .introduction_experience.active {
+            transform: translateX(-100%);
+            transition: all 2s ease ;
+          }
 
-      .scills-scores_container {
+          .hide_skills_scores {
+            display: block;
+          width: 20%;
+          text-align: center;
+          font: $button-fonts;
+          padding: 20px 40px;
+          border: 1px solid inherit;
+          border-radius: 10px;
+          background: rgb(255,255,255);
+          background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(36,103,210,1) 25%, rgba(36,103,210,1) 75%, rgba(255,255,255,1) 100%); 
+
+          }
+          .hide_projects{
+          display: block;
+          width: 20%;
+          text-align: center;
+          font: $button-fonts;
+          padding: 20px 40px;
+          border: 1px solid inherit;
+          border-radius: 10px;
+          background: rgb(255,255,255);
+          background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(36,103,210,1) 25%, rgba(36,103,210,1) 75%, rgba(255,255,255,1) 100%);
+          }
+
+
+
+          .skills-scores.active {
+            transform: translateX(-100%);
+            transition: all 2s ease ;
+          }
+
+      .skills-scores_container {
         display: flex;
-        justify-content: space-between;
-        .scills span {
+        justify-content: center;
+        .skills span {
           font: $basic-font-skills;
           color:inherit;
           display: block;
-          padding-bottom: 32px;
+          margin-bottom: 10px;
           }
         }
 
         .scores span {
           display: block;
           height: 14px;
-          width: 14px;
           background: #F92672;
           border-radius: 7px;
-          margin-bottom: 56px;
+          margin-bottom: 50px;
+          transform: translateY(-50%);
           &:nth-child(1) {
             width: 500px;
             margin-top:12px;
@@ -606,7 +697,7 @@ background-color: rgb(127,191,210);
           }
         }
 
-
+/*
     .parallax {
       background-image: url(/image/Depositphotos.png);
       background-attachment: fixed;
@@ -617,6 +708,8 @@ background-color: rgb(127,191,210);
       height: 100vh;
       width: 100%;
     }
+
+    */
 
     .burger_menu.side,.header__burger_logo_title.side {
       opacity: 0;

@@ -1,6 +1,7 @@
 gsap.from(".scores", {
     scrollTrigger: {
         trigger: ".scores",
+        start: "top top",
         toggleActions: "restart pause resume pause"
     },
     scaleX: 0.1,

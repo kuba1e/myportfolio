@@ -6,3 +6,10 @@ $(document).ready(function () {
         $('.burger__link,.burger_menu,.header__mail_logo,.burger_menu.active,.header__burger_logo_title').toggleClass('hover_link');
     });
 });
+
+$(document).ready(function () {
+    $('.nav_link_top').click(function (event) {
+        $('.section4').toggleClass('front');
+    });
+});
+
