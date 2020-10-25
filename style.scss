@@ -14,7 +14,7 @@ $button-fonts: 22px Arial, Helvetica, sans-serif;
 %sub-title {
   font-weight: bold;
   display: block;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
 }
 %background-style {
   background-size: cover;
@@ -389,6 +389,7 @@ body {
     transition: all 1s ease 0.5s;
 
     .show_skills-scores {
+      perspective: 50px;
       display: block;
       width: 100%;
       text-align: center;
@@ -398,7 +399,10 @@ body {
       border-radius: 10px;
       background: rgb(255,255,255);
       background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(161,212,97,1) 33%, rgba(161,212,97,1) 66%, rgba(255,255,255,1) 100%);
-        }
+      :hover {
+        transform: translateY(20px);
+      }    
+    }
         .show_projects {
           display: block;
           width: 100%;
@@ -407,9 +411,22 @@ body {
           padding: 20px 40px;
           border: 1px solid inherit;
           border-radius: 10px;
+          transform: perspective(1000px) rotateY(-45deg);
           background: rgb(255,255,255);
           background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,178,68,1) 33%, rgba(255,178,68,1) 66%, rgba(255,255,255,1) 100%);
+          transition: all 1s ease 0.5s;
+
+
+          &:hover {
+            transform: perspective(1000px) rotateY(45deg);
+            -webkit-box-shadow: 0px 0px 21px 8px rgba(255,255,255,1);
+-moz-box-shadow: 0px 0px 21px 8px rgba(255,255,255,1);
+box-shadow: 0px 0px 21px 8px rgba(255,255,255,1);
+          }
+
         }
+
+        
       }
       .show_experience {
         display: block;
@@ -584,7 +601,7 @@ body {
           width: 100%;
           height: 100%;
           padding:80px;
-          background-color: saddlebrown;
+          background-color: rgb(161,212,97);
           color:$font-color-skills;
           transition: all 2s ease;
           
@@ -601,7 +618,7 @@ body {
             top:0;
             z-index: 20;
             padding:80px;  
-            background-color: saddlebrown;
+            background-color: rgb(255,178,68);
             color:$font-color-skills;
             transition: all 2s ease;       
             h2 {
@@ -612,6 +629,7 @@ body {
               height: 80;
               display: grid;
               justify-content:center ;
+              align-content: center;
               grid-template-columns: 50% 50%;
               grid-template-rows: 1fr 1fr;
               grid-template-areas: 
@@ -635,6 +653,7 @@ body {
                 position: relative;
                 left: 0;
                 top: 0;
+                width: 70%;
               }
               .description_bottom {
                 grid-area: bottom;
@@ -681,7 +700,7 @@ body {
             bottom:0;
             padding:80px;  
             z-index: 100;
-            background-color: saddlebrown;
+            background-color: rgb(238,208,146);
             color:$font-color-skills;
             transition: all 2s ease;       
             h1 {
@@ -698,7 +717,7 @@ body {
             border: 1px solid inherit;
             border-radius: 10px;
             background: rgb(255,255,255);
-            background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(36,103,210,1) 25%, rgba(36,103,210,1) 75%, rgba(255,255,255,1) 100%); 
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(238,208,146,1) 33%, rgba(238,208,146,1) 66%, rgba(255,255,255,1) 100%); 
           }
           .introduction_experience.active {
             transform: translateX(-100%);
@@ -706,19 +725,20 @@ body {
           }
 
           .hide_skills_scores {
-            display: block;
-            position: relative;
-            z-index: 18;
-          width: 20%;
-          text-align: center;
-          font: $button-fonts;
-          padding: 20px 40px;
-          border: 1px solid inherit;
-          border-radius: 10px;
-          background: rgb(255,255,255);
-          background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(36,103,210,1) 25%, rgba(36,103,210,1) 75%, rgba(255,255,255,1) 100%); 
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform-origin: center;
+            transform: rotate(90deg) ;
+            transition: all 1s ease 1s;
 
-          }
+      }
+        .hide_skills_scores.active {
+          transform: rotate(-90deg);
+        }
+
           .hide_projects{
           display: block;
           width: 20%;
@@ -728,7 +748,7 @@ body {
           border: 1px solid inherit;
           border-radius: 10px;
           background: rgb(255,255,255);
-          background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(36,103,210,1) 25%, rgba(36,103,210,1) 75%, rgba(255,255,255,1) 100%);
+          background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,178,68,1) 33%, rgba(255,178,68,1) 66%, rgba(255,255,255,1) 100%);
           }
 
 

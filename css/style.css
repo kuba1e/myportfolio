@@ -7,7 +7,7 @@
 .introduction_projects h3 {
   font-weight: bold;
   display: block;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
 }
 
 .section1 .background_mask, .section2 .background_mask, .section3 .background_mask, .section4 .background_mask {
@@ -524,6 +524,8 @@ body {
 }
 
 .section__text .show_skills-scores {
+  -webkit-perspective: 50px;
+          perspective: 50px;
   display: block;
   width: 100%;
   text-align: center;
@@ -536,6 +538,11 @@ body {
   background: linear-gradient(90deg, white 0%, #a1d461 33%, #a1d461 66%, white 100%);
 }
 
+.section__text .show_skills-scores :hover {
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+}
+
 .section__text .show_projects {
   display: block;
   width: 100%;
@@ -544,9 +551,20 @@ body {
   padding: 20px 40px;
   border: 1px solid inherit;
   border-radius: 10px;
+  -webkit-transform: perspective(1000px) rotateY(-45deg);
+          transform: perspective(1000px) rotateY(-45deg);
   background: white;
   background: -webkit-gradient(linear, left top, right top, from(white), color-stop(33%, #ffb244), color-stop(66%, #ffb244), to(white));
   background: linear-gradient(90deg, white 0%, #ffb244 33%, #ffb244 66%, white 100%);
+  -webkit-transition: all 1s ease 0.5s;
+  transition: all 1s ease 0.5s;
+}
+
+.section__text .show_projects:hover {
+  -webkit-transform: perspective(1000px) rotateY(45deg);
+          transform: perspective(1000px) rotateY(45deg);
+  -webkit-box-shadow: 0px 0px 21px 8px white;
+  box-shadow: 0px 0px 21px 8px white;
 }
 
 .show_experience {
@@ -806,7 +824,7 @@ body {
   width: 100%;
   height: 100%;
   padding: 80px;
-  background-color: saddlebrown;
+  background-color: #a1d461;
   color: #fff;
   -webkit-transition: all 2s ease;
   transition: all 2s ease;
@@ -820,7 +838,7 @@ body {
   top: 0;
   z-index: 20;
   padding: 80px;
-  background-color: saddlebrown;
+  background-color: #ffb244;
   color: #fff;
   -webkit-transition: all 2s ease;
   transition: all 2s ease;
@@ -834,6 +852,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -ms-grid-columns: 50% 50%;
       grid-template-columns: 50% 50%;
   -ms-grid-rows: 1fr 1fr;
@@ -856,6 +876,7 @@ body {
   position: relative;
   left: 0;
   top: 0;
+  width: 70%;
 }
 
 .introduction_projects .description_bottom {
@@ -919,7 +940,7 @@ body {
   bottom: 0;
   padding: 80px;
   z-index: 100;
-  background-color: saddlebrown;
+  background-color: #eed092;
   color: #fff;
   -webkit-transition: all 2s ease;
   transition: all 2s ease;
@@ -934,8 +955,8 @@ body {
   border: 1px solid inherit;
   border-radius: 10px;
   background: white;
-  background: -webkit-gradient(linear, left top, right top, from(white), color-stop(25%, #2467d2), color-stop(75%, #2467d2), to(white));
-  background: linear-gradient(90deg, white 0%, #2467d2 25%, #2467d2 75%, white 100%);
+  background: -webkit-gradient(linear, left top, right top, from(white), color-stop(33%, #eed092), color-stop(66%, #eed092), to(white));
+  background: linear-gradient(90deg, white 0%, #eed092 33%, #eed092 66%, white 100%);
 }
 
 .introduction_experience.active {
@@ -946,18 +967,28 @@ body {
 }
 
 .hide_skills_scores {
-  display: block;
-  position: relative;
-  z-index: 18;
-  width: 20%;
-  text-align: center;
-  font: 22px Arial, Helvetica, sans-serif;
-  padding: 20px 40px;
-  border: 1px solid inherit;
-  border-radius: 10px;
-  background: white;
-  background: -webkit-gradient(linear, left top, right top, from(white), color-stop(25%, #2467d2), color-stop(75%, #2467d2), to(white));
-  background: linear-gradient(90deg, white 0%, #2467d2 25%, #2467d2 75%, white 100%);
+  width: 80px;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: all 1s ease 1s;
+  transition: all 1s ease 1s;
+}
+
+.hide_skills_scores.active {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .hide_projects {
@@ -969,8 +1000,8 @@ body {
   border: 1px solid inherit;
   border-radius: 10px;
   background: white;
-  background: -webkit-gradient(linear, left top, right top, from(white), color-stop(25%, #2467d2), color-stop(75%, #2467d2), to(white));
-  background: linear-gradient(90deg, white 0%, #2467d2 25%, #2467d2 75%, white 100%);
+  background: -webkit-gradient(linear, left top, right top, from(white), color-stop(33%, #ffb244), color-stop(66%, #ffb244), to(white));
+  background: linear-gradient(90deg, white 0%, #ffb244 33%, #ffb244 66%, white 100%);
 }
 
 .skills-scores.active {

@@ -16,12 +16,12 @@ let massPopChart = new Chart(myChart, {
 
         datasets: [{
             label: 'Colors',
-            data: [5, 5, 3, 4, 3, 3, 4, 3],
-            backgroundColor: ['rgb(161,212,97)', 'rgb(161,212,1)', 'rgb(161, 4, 97)'],
+            data: [5, 5, 2, 4, 2, 3, 4, 2],
+            backgroundColor: ['rgb(232,76,40)', 'rgb(19,118,192)', 'rgb(250,165,35)', 'rgb(207,100,154)', 'rgb(85,58,125)', 'rgb(246,78,25)', 'rgb(10, 201, 127)', 'rgb(211,74,71)'],
             borderWidth: 4,
-            borderColor: 'rgb(45,212,97)',
+            borderColor: '#fff',
             hoverBorderWidth: '10',
-            hoverBorderColor: 'rgb(161,212,1)'
+            hoverBorderColor: '#fff'
         }]
     },
     options: {
