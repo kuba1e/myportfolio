@@ -598,7 +598,7 @@ body {
 }
 
 .section3 .background_mask {
-  background-image: url('https://github.com/kuba1e/myportfolio/blob/main/image/section3.svg');
+  background-image: url(./image/section3.svg);
 }
 
 .section4 {
