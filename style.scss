@@ -659,6 +659,9 @@ body {
               .description_top,.description_bottom {
                 width: 40%;
                 margin-bottom: 3%;
+                span {
+                  font-style: italic;
+                }
               }
               img {
                 display: block;

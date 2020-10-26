@@ -877,6 +877,10 @@ body {
   margin-bottom: 3%;
 }
 
+.introduction_projects .description_top span, .introduction_projects .description_bottom span {
+  font-style: italic;
+}
+
 .introduction_projects img {
   display: block;
   position: fixed;
