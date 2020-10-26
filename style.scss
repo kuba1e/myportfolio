@@ -625,17 +625,17 @@ body {
             top:0;
             display: flex;
             flex-direction: column;
-            align-content: center;
+            justify-content: space-between;
             z-index: 20;
-            padding:80px; 
+            padding: 5%; 
             background-color: rgb(255,178,68);
             color:$font-color-skills;
             transition: all 2s ease;       
             h2 {
               @extend %title-for-scores-projects;
             }
-            .grid_container {
-              width: 100%;
+            .text_container {
+           /*   width: 100%;
               height: 100%;
               display: grid;
               justify-content: center;
@@ -647,11 +647,19 @@ body {
               "bottom responsive"
               ;
               overflow: hidden;
-            }
+            */
+            } 
+
             p {
               font: 32px Arial, Helvetica, sans-serif;
               display: block;
-              margin-bottom: 20px;
+              height: auto;
+              margin-bottom: 10px;
+            }
+
+            span {
+              display: block;
+
             }
 
             h3 {
@@ -660,42 +668,27 @@ body {
               font-weight: bold;
               }
               .description_top,.description_bottom {
-                position: relative;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                
+                width: 40%;
+                margin-bottom: 3%;
               }
-              .description_bottom {
-                grid-area: bottom;
-              }
-              .description_top {
-                grid-area: top;
-              }
-              .project_responsive {
-                grid-area: responsive;
-              }
-              .projects_mylib {
-                grid-area: responsive;
-              }
-
               img {
                 display: block;
-                position: relative;
-                width: 100%;
-                right: -100%;
+                position: fixed;
+                width: 50%;
+                right: -50%;
                 top: 0;
+                z-index: 20;
                 transition: all 2s ease;
+                transform: translateY(50%);
               }
               }
 
               .project_responsive.hover {
-                transform: translateX(-100%);
+                transform: translate(-110%,50%);
               }
               
               .projects_mylib.hover {
-                transform: translateX(-100%);
+                transform: translate(-110%,50%);
               }
 
           .introduction_projects.active {
@@ -711,11 +704,14 @@ body {
             left: 100%;
             bottom:0;
             padding:80px;  
-            z-index: 100;
+            z-index: 20;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             background-color: rgb(238,208,146);
             color:$font-color-skills;
             transition: all 2s ease;       
-            h1 {
+            h2 {
               @extend %title-for-scores-projects;
             }
           }

@@ -5,7 +5,7 @@
   box-shadow: 0px 0px 21px 8px white;
 }
 
-.skills-scores h2, .introduction_projects h2, .introduction_experience h1 {
+.skills-scores h2, .introduction_projects h2, .introduction_experience h2 {
   font: 80px/94px Arial, Helvetica, sans-serif;
   font-weight: bold;
   padding-bottom: 20px;
@@ -843,39 +843,42 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   z-index: 20;
-  padding: 80px;
+  padding: 5%;
   background-color: #ffb244;
   color: #fff;
   -webkit-transition: all 2s ease;
   transition: all 2s ease;
 }
 
-.introduction_projects .grid_container {
-  width: 100%;
-  height: 100%;
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      grid-template-areas: "top responsive" "bottom responsive";
-  overflow: hidden;
+.introduction_projects .text_container {
+  /*   width: 100%;
+              height: 100%;
+              display: grid;
+              justify-content: center;
+              align-items: center;
+              grid-template-columns: 1fr 1fr;
+              grid-template-rows: 1fr 1fr;
+              grid-template-areas: 
+              "top responsive"
+              "bottom responsive"
+              ;
+              overflow: hidden;
+            */
 }
 
 .introduction_projects p {
   font: 32px Arial, Helvetica, sans-serif;
   display: block;
-  margin-bottom: 20px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.introduction_projects span {
+  display: block;
 }
 
 .introduction_projects h3 {
@@ -884,57 +887,31 @@ body {
 }
 
 .introduction_projects .description_top, .introduction_projects .description_bottom {
-  position: relative;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.introduction_projects .description_bottom {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: bottom;
-}
-
-.introduction_projects .description_top {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: top;
-}
-
-.introduction_projects .project_responsive {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 2;
-  grid-area: responsive;
-}
-
-.introduction_projects .projects_mylib {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 2;
-  grid-area: responsive;
+  width: 40%;
+  margin-bottom: 3%;
 }
 
 .introduction_projects img {
   display: block;
-  position: relative;
-  width: 100%;
-  right: -100%;
+  position: fixed;
+  width: 50%;
+  right: -50%;
   top: 0;
+  z-index: 20;
   -webkit-transition: all 2s ease;
   transition: all 2s ease;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
 }
 
 .project_responsive.hover {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  -webkit-transform: translate(-110%, 50%);
+          transform: translate(-110%, 50%);
 }
 
 .projects_mylib.hover {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  -webkit-transform: translate(-110%, 50%);
+          transform: translate(-110%, 50%);
 }
 
 .introduction_projects.active {
@@ -951,7 +928,17 @@ body {
   left: 100%;
   bottom: 0;
   padding: 80px;
-  z-index: 100;
+  z-index: 20;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #eed092;
   color: #fff;
   -webkit-transition: all 2s ease;
