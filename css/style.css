@@ -479,7 +479,7 @@ body {
 }
 
 .section1 .background_mask {
-  background-image: url(/image/section1.svg);
+  background-image: url("/image/section1.svg");
 }
 
 .background_mask.active, .section__text.active {
@@ -504,7 +504,7 @@ body {
 }
 
 .section2 .background_mask {
-  background-image: url(/image/section2.svg);
+  background-image: url("/image/section2.svg");
 }
 
 .section__text {
@@ -598,7 +598,7 @@ body {
 }
 
 .section3 .background_mask {
-  background-image: url(/image/section3.svg);
+  background-image: url("/image/section3.svg");
 }
 
 .section4 {
@@ -606,7 +606,7 @@ body {
 }
 
 .section4 .background_mask {
-  background-image: url(/image/section4.svg);
+  background-image: url("/image/section4.svg");
 }
 
 .section3.front, .section2.front, .section1.front {

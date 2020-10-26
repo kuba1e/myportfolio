@@ -355,7 +355,7 @@ body {
     overflow: hidden;
     //transition: all 1s ease 0.5s;
     .background_mask {
-    background-image: url(/image/section1.svg);
+    background-image: url("/image/section1.svg");
       @extend %background-style;
   }
   }
@@ -378,7 +378,7 @@ body {
     overflow: hidden;
    // transition: all 1s ease 1.5s;
     .background_mask {
-    background-image: url(/image/section2.svg);
+    background-image: url('/image/section2.svg');
     @extend %background-style;
     }
   }
@@ -464,7 +464,7 @@ body {
     overflow: hidden;
     //transition: all 1s ease 2.5s;
     .background_mask {
-    background-image: url(/image/section3.svg);
+    background-image: url('/image/section3.svg');
     @extend %background-style;
     }
   }
@@ -472,7 +472,7 @@ body {
   .section4 {
     overflow: hidden;
     .background_mask {
-    background-image: url(/image/section4.svg);
+    background-image: url('/image/section4.svg');
     @extend %background-style;
     }
   }
