@@ -598,7 +598,7 @@ body {
 }
 
 .section3 .background_mask {
-  background-image: url(./image/section3.svg);
+  background-image: url(/image/section3.svg);
 }
 
 .section4 {
@@ -868,8 +868,7 @@ body {
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      grid-template-areas: "top responsive"
- "bottom responsive";
+      grid-template-areas: "top responsive" "bottom responsive";
   overflow: hidden;
 }
 
