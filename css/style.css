@@ -11,7 +11,7 @@
   padding-bottom: 20px;
 }
 
-.introduction_projects h3 {
+.introduction_projects h3, .introduction_experience h3 {
   font-weight: bold;
   display: block;
   padding-bottom: 15px;
@@ -507,14 +507,29 @@ body {
   background-image: url("/image/section2.svg");
 }
 
+.section3 {
+  overflow: hidden;
+}
+
+.section3 .background_mask {
+  background-image: url("/image/section3.svg");
+}
+
+.section4 {
+  overflow: hidden;
+}
+
+.section4 .background_mask {
+  background-image: url("/image/section4.svg");
+}
+
 .section__text {
   position: absolute;
-  right: 10%;
+  right: 0;
   top: 50%;
-  width: 45%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  z-index: 19;
+  width: 60%;
+  height: 100%;
+  padding: 5% 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -522,6 +537,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  z-index: 19;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -591,22 +609,6 @@ body {
   color: #fff;
   height: auto;
   margin-bottom: 30px;
-}
-
-.section3 {
-  overflow: hidden;
-}
-
-.section3 .background_mask {
-  background-image: url("/image/section3.svg");
-}
-
-.section4 {
-  overflow: hidden;
-}
-
-.section4 .background_mask {
-  background-image: url("/image/section4.svg");
 }
 
 .section3.front, .section2.front, .section1.front {
@@ -854,22 +856,6 @@ body {
   transition: all 2s ease;
 }
 
-.introduction_projects .text_container {
-  /*   width: 100%;
-              height: 100%;
-              display: grid;
-              justify-content: center;
-              align-items: center;
-              grid-template-columns: 1fr 1fr;
-              grid-template-rows: 1fr 1fr;
-              grid-template-areas: 
-              "top responsive"
-              "bottom responsive"
-              ;
-              overflow: hidden;
-            */
-}
-
 .introduction_projects p {
   font: 32px Arial, Helvetica, sans-serif;
   display: block;
@@ -927,7 +913,7 @@ body {
   height: 100%;
   left: 100%;
   bottom: 0;
-  padding: 80px;
+  padding: 5%;
   z-index: 20;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -943,6 +929,19 @@ body {
   color: #fff;
   -webkit-transition: all 2s ease;
   transition: all 2s ease;
+}
+
+.introduction_experience p {
+  font: 32px Arial, Helvetica, sans-serif;
+  display: block;
+  height: auto;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.introduction_experience h3 {
+  font: 32px/38px Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
 
 .hide_experience {
@@ -1095,7 +1094,7 @@ body {
   font: 60px/60px "Alfa Slab One", cursive;
   color: white;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .perspective_line {

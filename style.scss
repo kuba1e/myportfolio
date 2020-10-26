@@ -382,16 +382,36 @@ body {
     @extend %background-style;
     }
   }
+
+    .section3 {
+    overflow: hidden;
+    //transition: all 1s ease 2.5s;
+    .background_mask {
+    background-image: url('/image/section3.svg');
+    @extend %background-style;
+    }
+  }
+
+  .section4 {
+    overflow: hidden;
+    .background_mask {
+    background-image: url('/image/section4.svg');
+    @extend %background-style;
+    }
+  }
+
   
   .section__text {
     position: absolute;
-    right: 10%;
+    right: 0;
     top: 50%;
-    width: 45%;
-    transform: translate(0,-50%) ;
-    z-index: 19;
+    width: 60%;
+    height: 100%;
+    padding: 5% 10%;
     display: flex;
     flex-direction: column;
+    transform: translate(0,-50%) ;
+    z-index: 19;
     justify-content: flex-end ;
     text-align: right; 
     transition: all 1s ease 0.5s;
@@ -460,22 +480,6 @@ body {
     margin-bottom: 30px;
   }  
 
-  .section3 {
-    overflow: hidden;
-    //transition: all 1s ease 2.5s;
-    .background_mask {
-    background-image: url('/image/section3.svg');
-    @extend %background-style;
-    }
-  }
-
-  .section4 {
-    overflow: hidden;
-    .background_mask {
-    background-image: url('/image/section4.svg');
-    @extend %background-style;
-    }
-  }
 
   .section3.front,.section2.front,.section1.front {
     transform: translate3d(-100%, 0px, 0px);
@@ -518,6 +522,7 @@ body {
       opacity: 0;
 
     }
+
 
     .container_click {
       width: 150px;
@@ -634,22 +639,6 @@ body {
             h2 {
               @extend %title-for-scores-projects;
             }
-            .text_container {
-           /*   width: 100%;
-              height: 100%;
-              display: grid;
-              justify-content: center;
-              align-items: center;
-              grid-template-columns: 1fr 1fr;
-              grid-template-rows: 1fr 1fr;
-              grid-template-areas: 
-              "top responsive"
-              "bottom responsive"
-              ;
-              overflow: hidden;
-            */
-            } 
-
             p {
               font: 32px Arial, Helvetica, sans-serif;
               display: block;
@@ -703,7 +692,7 @@ body {
             height: 100%;
             left: 100%;
             bottom:0;
-            padding:80px;  
+            padding:5%;  
             z-index: 20;
             display: flex;
             flex-direction: column;
@@ -713,6 +702,18 @@ body {
             transition: all 2s ease;       
             h2 {
               @extend %title-for-scores-projects;
+            }
+            p {
+              font: 32px Arial, Helvetica, sans-serif;
+              display: block;
+              height: auto;
+              margin-bottom: 10px;
+              font-style: italic;
+            }
+            h3 {
+              font: $basic-font-skills;
+              @extend  %sub-title;
+              font-weight: bold;
             }
           }
           
@@ -836,7 +837,7 @@ body {
         font: $font-for-film-title;
         color: white;
         text-transform: uppercase;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
       }
 
       .perspective_line {
