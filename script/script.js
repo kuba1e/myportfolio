@@ -8,19 +8,19 @@ $(document).ready(function () {
         scrollingSpeed: 700,
         easing: 'swing',
         loopBottom: true,
-        loopTop: false,
+        loopTop: true,
         css3: true,
         navigation: {
             'textColor': '#000',
             'bulletsColor': '#000',
             'position': 'right',
-            'tooltips': ['section1', 'section2', 'section3', 'section4']
+            'tooltips': ['section1', 'section2', 'section3', 'section4', 'section5']
         },
         normalScrollElements: null,
         normalScrollElementTouchThreshold: 5,
         touchSensitivity: 5,
         keyboardScrolling: true,
-        sectionSelector: '.section1,.section2,.section3,.section4',
+        sectionSelector: '.section1,.section2,.section3,.section4,.section5',
         animateAnchor: true,
 
         //events

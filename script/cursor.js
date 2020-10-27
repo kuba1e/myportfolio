@@ -1,5 +1,5 @@
 let mouseCursor = document.querySelector(".cursor");
-let navLinks = document.querySelectorAll('.hide_background,.hide_experience,.hide_projects,.hide_skills_scores,.show_projects,.show_experience,.show_skills-scores,.nav_links li,.header__burger_logo,.header__contacts,.mylib,.responsive,.container_click');
+let navLinks = document.querySelectorAll('.end_contacts,.hide_background,.hide_experience,.hide_projects,.hide_skills_scores,.show_projects,.show_experience,.show_skills-scores,.nav_links li,.header__burger_logo,.header__contacts,.mylib,.responsive,.container_click');
 
 window.addEventListener('mousemove', cursor);
 
