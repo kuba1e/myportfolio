@@ -542,7 +542,7 @@ body {
   z-index: 19;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: flex-end;
+          justify-content: center;
   text-align: right;
   -webkit-transition: all 1s ease 0.5s;
   transition: all 1s ease 0.5s;
@@ -1095,27 +1095,27 @@ body {
 }
 
 .perspective_text {
-  font: 60px/60px "Alfa Slab One", cursive;
+  font: 55px/55px "Alfa Slab One", cursive;
   color: white;
   text-transform: uppercase;
   margin-bottom: 15px;
 }
 
 .perspective_line {
-  height: 60px;
+  height: 55px;
   overflow: hidden;
   position: relative;
 }
 
 p {
   margin: 0;
-  height: 60px;
-  line-height: 60px;
+  height: 55px;
+  line-height: 55px;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
 .perspective_line:hover p {
-  -webkit-transform: translate(0, -60px);
-          transform: translate(0, -60px);
+  -webkit-transform: translate(0, -55px);
+          transform: translate(0, -55px);
 }
