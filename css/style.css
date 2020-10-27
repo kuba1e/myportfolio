@@ -1119,3 +1119,44 @@ p {
   -webkit-transform: translate(0, -60px);
           transform: translate(0, -60px);
 }
+
+.hide_background {
+  position: fixed;
+  left: 5%;
+  top: 50%;
+  width: 80px;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  z-index: 18;
+  opacity: 0;
+  -webkit-transition: all 1s ease 0.5s;
+  transition: all 1s ease 0.5s;
+  pointer-events: none;
+}
+
+.hide_background.active {
+  opacity: 0.5;
+  pointer-events: painted;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.hide_background.active:hover {
+  opacity: 1;
+}

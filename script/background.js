@@ -1,12 +1,16 @@
 $(document).ready(function () {
     $('.background_mask,.container_click').click(function (event) {
-        $('.background_mask,.section__text,.container_click').toggleClass('active');
+        $('.background_mask,.section__text,.container_click,.hide_background').toggleClass('active');
     });
     $('.show_skills-scores').click(function (event) {
         $('.skills-scores,.hide_skills_scores').toggleClass('active');
     });
     $('.container_click').click(function (event) {
         $('.background_mask').removeClass('opacity');
+    });
+
+    $('.hide_background').click(function (event) {
+        $('.background_mask,.section__text,.container_click,.hide_background').removeClass('active');
     });
     $('.hide_skills_scores').click(function (event) {
         $('.hide_skills_scores').removeClass('active');

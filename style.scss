@@ -857,3 +857,30 @@ body {
       .perspective_line:hover p{
         transform: translate(0, -60px);
       }
+
+      .hide_background {
+        position: fixed;
+        left: 5%;
+        top: 50%;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-50%);
+        transform: rotate(90deg);
+        transform-origin: center;
+        z-index: 18;
+        opacity: 0;
+        transition: all 1s ease 0.5s;
+        pointer-events: none;
+      }
+      .hide_background.active {
+        opacity: 0.5;
+        pointer-events: painted;
+        transition: all 1s ease;
+        transform: rotate(-90deg);
+        &:hover {
+          opacity: 1;
+        }
+      }
