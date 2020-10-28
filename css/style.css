@@ -528,8 +528,8 @@ body {
   position: absolute;
   right: 0;
   top: 50%;
-  width: 850px;
-  height: 100%;
+  width: 900px;
+  height: auto;
   padding: 5% 10%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1180,14 +1180,14 @@ p {
 
 .perspective_end_text {
   position: absolute;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  left: 25%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 40%;
   top: 50%;
   color: white;
   font-family: Arial;
   font-size: 74px;
-  font-weight: 900;
+  font-weight: bold;
   letter-spacing: -2px;
   text-transform: uppercase;
 }
